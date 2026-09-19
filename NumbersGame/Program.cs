@@ -44,13 +44,51 @@
             {
                 if (guess > rightAnswer)
                 {
-                    Console.WriteLine("too high");
-                    return false;
+                    Random rand = new Random();
+                    int slumpsvar = rand.Next(1, 5);
+                    switch (slumpsvar)
+                    {
+                        case 1:
+                            Console.WriteLine("You guessed too high.");
+                            return false;
+                            break;
+                        case 2:
+                            Console.WriteLine("No, no, that's too big.");
+                            return false;
+                            break;
+                        case 3:
+                            Console.WriteLine("Hehe, that's too much.");
+                            return false;
+                            break;
+                        case 4:
+                            Console.WriteLine("Try something lower.");
+                            return false;
+                            break;
+                    }
                 }
                 else if (guess < rightAnswer)
                 {
-                    Console.WriteLine("too low");
-                    return false;
+                    Random rand = new Random();
+                    int slumpsvar = rand.Next(1, 5);
+                    switch (slumpsvar)
+                    {
+                        case 1:
+                            Console.WriteLine("Try going higher.");
+                            return false;
+                            break;
+                        case 2:
+                            Console.WriteLine("That's too low.");
+                            return false;
+                            break;
+                        case 3:
+                            Console.WriteLine("No, go higher.");
+                            return false;
+                            break;
+                        case 4:
+                            Console.WriteLine("Don't be shy, go higher.");
+                            return false;
+                            break;
+                    }
                 }
                 if (guess == rightAnswer)
                 {
