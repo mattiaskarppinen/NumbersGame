@@ -42,6 +42,7 @@
 
             static bool CheckGuess(int guess, int rightAnswer)
             {
+                //Check if the user is close to the right answer
                 if (guess == rightAnswer + 1 || guess == rightAnswer - 1)
                 {
                     Console.WriteLine("You're close now...");
