@@ -6,10 +6,10 @@
         {
             //generate a random answer
             Random ran = new Random();
-            int rightAnswer = ran.Next(1, 20);
+            int rightAnswer = ran.Next(1, 26);
 
             int attempts = 4;
-            Console.WriteLine("Guess the secret number (1-20) You have {0} attempts.", attempts + 1);
+            Console.WriteLine("Guess the secret number (1-25) You have {0} attempts.", attempts + 1);
 
             do
             {
@@ -42,6 +42,10 @@
 
             static bool CheckGuess(int guess, int rightAnswer)
             {
+                if (guess == rightAnswer + 1 || guess == rightAnswer - 1)
+                {
+                    Console.WriteLine("You're close now...");
+                }
                 if (guess > rightAnswer)
                 {
                     Random rand = new Random();
