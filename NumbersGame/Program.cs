@@ -6,7 +6,7 @@
         {
             //generate a random answer
             Random ran = new Random();
-            int rightAnswer = ran.Next(1, 26);
+            int rightAnswer = ran.Next(1, 26); //the max value is not indluded in 1-25
 
             int attempts = 4;
             Console.WriteLine("Guess the secret number (1-25) You have {0} attempts.", attempts + 1);
@@ -31,7 +31,7 @@
                 }
                 else
                 {
-                    Console.WriteLine("Invalid input");
+                    Console.WriteLine("Invalid input!");
                     continue;
                 }
 
@@ -40,6 +40,7 @@
             Console.WriteLine($"Game Over!");
             Console.ReadLine();
 
+            //Method to check the guess compared to the right answer
             static bool CheckGuess(int guess, int rightAnswer)
             {
                 //Check if the user is close to the right answer
